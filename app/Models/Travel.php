@@ -10,14 +10,14 @@ class Travel extends Model
     use HasFactory;
 
     public function traveler(){
-        return $this->hasMany('App\Models\Traveler');
+        return $this->belongsTo('App\Models\Traveler');
     }
 
     public function origin(){
-        return $this->hasMany('App\Models\Origin');
+        return $this->belongsTo('App\Models\Origin');
     }
 
     public function destination(){
-        return $this->hasMany('App\Models\Destination');
+        return $this->belongsTo('App\Models\Destination');
     }
 }
